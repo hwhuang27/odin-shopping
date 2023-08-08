@@ -1,13 +1,17 @@
-import { useState } from 'react'
 import Navbar from './Navbar'
+import Product from './Product'
 
 function Shop() {
-    const [count, setCount] = useState(0)
 
     return (
         <>
         <Navbar />
-            <h1 className="text-center">Shop</h1>
+        <div className="grid grid-cols-3 p-4">
+            <Product/>
+            <Product/>
+            <Product/>
+        </div>
+
         </>
     )
 }
