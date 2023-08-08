@@ -4,9 +4,17 @@ import Navbar from './Navbar'
 import Product from './Product'
 
 export default function Shop() {
+    const [cart, setCart] = useState({});
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
+
+    const handleAddToCart = (id, quantity) => {
+        setCart((newCart) => ({
+            ...newCart,
+            [id]: quantity,
+        }));
+    }
 
     useEffect(() => {
         const getData = async () => {
@@ -47,8 +55,13 @@ export default function Shop() {
         <>
         <Navbar />
         <div className="grid grid-cols-4 px-12 gap-8 py-4">
-            {data.map((item, index) => {
-                return <Product key={index} name={item.title} price={item.price} image={item.image}></Product>
+            {data.map((item) => {
+                return <Product 
+                    key={item.id} id={item.id} 
+                    name={item.title} price={item.price} 
+                    image={item.image}
+                    handleAddToCart={handleAddToCart}>
+                    </Product>
             })}
         </div>
 
