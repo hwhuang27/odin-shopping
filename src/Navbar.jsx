@@ -9,10 +9,10 @@ export default function Navbar() {
                     className="p-3 px-12 text-2xl text-white hover:bg-white hover:text-neutral-800">Home</Link>
                 
                 <Link to="/shop" 
-                        className="p-3 px-12 text-2xl text-white hover:bg-white hover:text-neutral-800">Shop</Link>
+                    className="p-3 px-12 text-2xl text-white hover:bg-white hover:text-neutral-800">Shop</Link>
                 
                 <Link to="/cart" 
-                        className="p-3 px-12 text-2xl text-white hover:bg-white hover:text-neutral-800">Cart</Link>
+                    className="p-3 px-12 text-2xl text-white hover:bg-white hover:text-neutral-800">Cart</Link>
             </ul>
         </nav>
         </>
