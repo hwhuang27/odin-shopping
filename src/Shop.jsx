@@ -47,8 +47,8 @@ export default function Shop() {
         <>
         <Navbar />
         <div className="grid grid-cols-4 px-12 gap-8 py-4">
-            {data.map((item) => {
-                return <Product name={item.title} price={item.price} image={item.image}></Product>
+            {data.map((item, index) => {
+                return <Product key={index} name={item.title} price={item.price} image={item.image}></Product>
             })}
         </div>
 
