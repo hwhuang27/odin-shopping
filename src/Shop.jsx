@@ -12,7 +12,7 @@ export default function Shop({handleAddToCart}) {
         const getData = async () => {
             try {
                 const response = await fetch(
-                    `https://fakestoreapi.com/products?limit=9`
+                    `https://fakestoreapi.com/products?limit=8`
                 );
                 if (!response.ok) {
                     throw new Error(

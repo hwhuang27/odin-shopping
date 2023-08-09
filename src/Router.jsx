@@ -5,13 +5,20 @@ import Shop from "./Shop.jsx"
 import Cart from "./Cart.jsx"
 
 const Router = () => {
-    const [cart, setCart] = useState({});
+    const [cart, setCart] = useState([]);
 
-    const handleAddToCart = (id, quantity) => {
-        setCart((newCart) => ({
+    const handleAddToCart = (id, name, quantity, price, image) => {
+        setCart((newCart) => ([
             ...newCart,
-            [id]: quantity,
-        }));
+            {
+                id,
+                name,
+                quantity,
+                price,
+                image,
+            }
+        ]
+        ));
     }
 
     const router = createBrowserRouter([

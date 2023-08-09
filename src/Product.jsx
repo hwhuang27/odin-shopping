@@ -43,7 +43,7 @@ export default function Product({ id, name, price, image, handleAddToCart}) {
                 
                 <div className="p-2">
                     <button onClick={()=> {
-                        handleAddToCart(id, quantity)}
+                        handleAddToCart(id, name, quantity, price, image)}
                     }
                     className="bg-slate-400 hover:bg-slate-500 border-none text-white font-bold py-2 px-4 rounded focus:outline-none">Add to Cart</button>
                 </div>
