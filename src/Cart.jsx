@@ -1,15 +1,14 @@
-import { useState } from 'react'
 import Navbar from './Navbar'
+import CartItem from './CartItem'
 
-function Cart() {
-    const [count, setCount] = useState(0)
+export default function Cart({cart}) {
+
+    console.log(cart);
 
     return (
         <>
         <Navbar />
-            <h1 className="text-center">Cart</h1>
+            <h1 className="text-center mt-8">Cart</h1>
         </>
     )
 }
-
-export default Cart;

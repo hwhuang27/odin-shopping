@@ -1,9 +1,19 @@
+import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home.jsx"
 import Shop from "./Shop.jsx"
 import Cart from "./Cart.jsx"
 
 const Router = () => {
+    const [cart, setCart] = useState({});
+
+    const handleAddToCart = (id, quantity) => {
+        setCart((newCart) => ({
+            ...newCart,
+            [id]: quantity,
+        }));
+    }
+
     const router = createBrowserRouter([
         {
             path: "/",
@@ -12,10 +22,10 @@ const Router = () => {
         },        
         {
             path: "shop",
-            element: <Shop />,
+            element: <Shop handleAddToCart={handleAddToCart}/>,
         },        {
             path: "cart",
-            element: <Cart />,
+            element: <Cart cart={cart}/>,
         },
     ])
 

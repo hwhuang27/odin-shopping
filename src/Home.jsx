@@ -5,7 +5,7 @@ function Home() {
     return (
         <>
         <Navbar/>
-        <h1 className="text-center">Home</h1>
+        <h1 className="text-center mt-8">Home</h1>
         </>
     )
 }

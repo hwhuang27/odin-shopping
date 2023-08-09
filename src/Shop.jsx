@@ -3,24 +3,16 @@ import { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import Product from './Product'
 
-export default function Shop() {
-    const [cart, setCart] = useState({});
+export default function Shop({handleAddToCart}) {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
-
-    const handleAddToCart = (id, quantity) => {
-        setCart((newCart) => ({
-            ...newCart,
-            [id]: quantity,
-        }));
-    }
 
     useEffect(() => {
         const getData = async () => {
             try {
                 const response = await fetch(
-                    `https://fakestoreapi.com/products?limit=8`
+                    `https://fakestoreapi.com/products?limit=9`
                 );
                 if (!response.ok) {
                     throw new Error(
@@ -54,16 +46,16 @@ export default function Shop() {
     return (
         <>
         <Navbar />
-        <div className="grid grid-cols-4 px-12 gap-8 py-4">
-            {data.map((item) => {
-                return <Product 
-                    key={item.id} id={item.id} 
-                    name={item.title} price={item.price} 
-                    image={item.image}
-                    handleAddToCart={handleAddToCart}>
+            <div className="grid grid-cols-4 px-12 gap-8 py-4">
+                {data.map((item) => {
+                    return <Product
+                        key={item.id} id={item.id}
+                        name={item.title} price={item.price}
+                        image={item.image}
+                        handleAddToCart={handleAddToCart}>
                     </Product>
-            })}
-        </div>
+                })}
+            </div>
 
         </>
     )
