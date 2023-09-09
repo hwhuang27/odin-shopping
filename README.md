@@ -1,6 +1,6 @@
 # Shopping Cart Project
 
-Mock storefront webpage with shopping cart functionality
+Mock storefront with shopping cart page 
 
 React practice project for [The Odin Project](https://www.theodinproject.com/).
 
