@@ -1,6 +1,6 @@
 # Shopping Cart
 
-Frontend SPA storefront where users can browse items (fetched from FakeStore API) to add to their shopping cart.
+Frontend store page where users can browse items (fetched from FakeStore API) to add to their shopping cart.
 
 Vercel website can be found [here](https://odin-shopping.vercel.app/).
 
