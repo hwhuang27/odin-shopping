@@ -1,10 +1,14 @@
-# Shopping Cart Project
+# Shopping Cart
 
-Mock front-end store page with single-page navigation that fetches and displays inventory data from API.  
-https://odin-shopping.vercel.app/
+Frontend SPA storefront where users can browse items (fetched from FakeStore API) to add to their shopping cart.
+
+Vercel website can be found [here](https://odin-shopping.vercel.app/).
 
 React practice project for [The Odin Project](https://www.theodinproject.com/).
 
-Data fetched from [FakeStore API](https://fakestoreapi.com/), and routed with [React Router](https://reactrouter.com/en/main).
-
-Made using [Vite](https://vitejs.dev/), styled with [Tailwind CSS](https://tailwindcss.com/) and deployed with [Vercel](https://vercel.com/).
+## Built with...
+- [React](https://react.dev/) and [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/) for CSS styling
+- [FakeStore API](https://fakestoreapi.com/) for fake store data
+- [React Router](https://reactrouter.com/en/main) for page routing
+- [Vercel](https://vercel.com/) for deployment
